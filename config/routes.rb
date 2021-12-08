@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
+  get 'users', to: 'users#index'
+  get 'users/:id' => 'users#show', :as => :user
+  delete 'users/:id', to: 'users#destroy'
   
   get 'admin/index'
   get 'main/index'
