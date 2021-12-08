@@ -1,0 +1,228 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,400&display=swap';
+@import 'reset.css';
+
+
+.section1 {
+    position: relative;
+    margin: 0px;
+    background-color: #1B1D1A;
+    height: 85px;
+    width: 100%;
+  }
+  #grid_sectionposts1 {
+    display: grid;
+    grid-template-columns: 62% 1fr 1fr 1fr;
+    grid-template-rows: 85px;
+    grid-gap: 52px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 0px;
+    margin-bottom: 0px
+  }
+  #grid > div {
+    padding: 0px;
+    /* background: gold; */
+    text-align: left;
+  }
+
+  .sectionposts1_p1 {
+    font-family: Gosha Regular;
+    font-size: 48px;
+    margin-top: 15px;
+    color: #D82C2C;
+  }
+  .sectionposts1_p2 {
+    font-family: Gosha Ultralight;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+
+      &:active {
+        
+      }
+      
+      
+    }
+  }
+  .sectionposts1_p3 {
+    font-family: Gosha Ultralight;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+    }
+  }
+  .sectionposts1_p4 {
+    font-family: Gosha Regular;
+    font-size: 36px;
+    margin-top: 21px;
+    
+    a {
+      color: #D82C2C;
+    }
+  }
+
+  
+.posts{
+    background-color: #292929;
+     height: 100%;
+     width: 100%;
+     font-family: 'Open Sans', sans-serif;
+     
+   &_container {
+      padding: 40px 60px;
+
+       .post_creation_action {
+           float: right;
+           background-color: #C4C4C4;
+           color: #1B1D1A;
+           font-size: 16px;
+           border: none;
+           border-radius: 2px;
+           padding: 8px 16px;
+           margin-bottom: 24px;
+       }
+       
+   }
+}
+
+
+.post {
+    width: 650px;
+    background-color: #C4C4C4;
+    margin-bottom: 40px;
+
+    &_contentFull {
+
+        
+        padding: 24px 56px 56px;
+        font-family: 'Open Sans', sans-serif;
+        color: #1B1D1A;
+    }
+
+    &_additional {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+
+        button {
+            text-decoration: none;
+            color: #1B1D1A;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #1B1D1A;
+
+            &:hover {
+                color: #1B1D1A;
+            }
+        }
+        
+       
+    }
+
+    &_author {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 24px;
+    }
+
+    &_content {
+        font-size: 22px;
+        font-weight: regular;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    &_actions {
+        text-decoration: none;
+        float: right;
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #1B1D1A;
+
+        button {
+            text-decoration: none;
+            color: #1B1D1A;
+            font-weight: bold;
+            background: none;
+            border: none;
+            color: #1B1D1A;
+
+            &:hover {
+                color: rgba($color: #1B1D1A, $alpha: 0.6);
+            } 
+        }
+        
+    }
+}
+
+.comments {
+    
+    background-color: #1B1D1A;
+    width: 100%;
+
+    &_action {
+        display: flex;
+        justify-content: space-between;
+    }
+
+   
+
+}
+
+
+
+
+.form {
+  width: 450px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+  background-color: #1B1D1A;
+  margin: 50px auto;
+  border-radius: 2px;
+
+  .field {
+    width: 100%;
+    height: 56px;
+    margin-bottom: 24px;
+     
+    p{
+      font-size: 18px;
+      color: #D82C2C;
+    }
+
+    input {
+      background-color: #D82C2C;
+      width: 100%;
+      border-radius: 2px;
+      height: 56px;
+      outline: none;
+    }
+  }
+
+  .actions {
+    button {
+      text-decoration: none;
+      color: #1B1D1A;
+      font-weight: bold;
+      background: none;
+      border: none;
+      color: #1B1D1A;
+      background-color: #D82C2C;
+
+  
+      &:hover {
+          color: rgba($color: #1B1D1A, $alpha: 0.6);
+      } 
+    }
+  }
+}

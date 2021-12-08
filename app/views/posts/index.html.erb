@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+
+
+
+<div class="section1">
+      <div id="grid_sectionposts1" class="">
+        <div class="sectionposts1_p1">квазоид</div>
+        <div class="sectionposts1_p2"><a href="/promo/index">промо</a></div>
+        <div class="sectionposts1_p3"><a href="/about/index">о нас</a></div>
+        <div class="sectionposts1_p4"><%= link_to "посты", posts_path %></div>
+      </div>
+</div>
+
+
+<section class="posts">
+<div class="posts_container">
+<button class='post_creation_action'><%= link_to 'Создать пост', new_post_path %></button>
+<button class='post_creation_action'><%= link_to 'New Category', new_category_path %></button>
+
+<h2>All Categories</h2>
+<% Category.all.each do |cat| %>
+	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
+<% end %>
+
+        <% @posts.each do |post| %>
+<div class="post">
+    <div class="post_contentFull">
+
+
+        <div class="post_additional">
+        <p>Опубликовано <%= post.created_at %></p>
+        <button><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+        </div>
+
+        <p class='post_author'><%= User.find(post.user_id).email %></p>
+        <p class='post_content'><%= post.content %></p>
+        <p>
+	    <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
+        </p>
+        <p>
+          <%= post.commentts.count %> <%= (post.commentts.count) == 1 ? 'Comment' : 'Comments'%>
+        </p>
+        <div class="post_actions">
+        <button><%= link_to 'Show', post %></button>
+        <button><%= link_to 'Edit', edit_post_path(post) %></button>
+        </div>
+
+
+    </div>
+
+
+    <%# <div class="comments">
+
+    <div class="comments_action">
+        <%# <%= render "commentts/form" %> 
+        <%# <button class="comment_publish"></button>
+    </div> %>
+
+    <%# <div class="comments_list">
+        
+    </div>
+
+    </div>  %>
+
+
+</div>
+        <% end %>
+
+</div>
+</section>
+
+
